@@ -83,7 +83,7 @@ class Main {
             while(currNode != null && (!(currNode.str).equals(position))){
                 prevNode = currNode;
                 currNode = currNode.next;
-            
+            }
                 //check if we found targetValue
                 if(currNode != null){
                     //did find it
@@ -92,9 +92,10 @@ class Main {
                 }
             }
         }
-    }
         return head;
     }
+        
+    
     
 
     public static void printList(Node head){
