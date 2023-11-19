@@ -89,6 +89,7 @@ class Main {
         String myScan;
         Node head = new Node();
         head.next = null;
+        String test = "test";
         //head = push(head, "test");
         //head = push(head, "test2");
         //head = push(head, "test3");
