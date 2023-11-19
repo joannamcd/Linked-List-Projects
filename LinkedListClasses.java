@@ -25,6 +25,13 @@ public class LinkedListClasses{
                 new_node.next = head;
                 head = new_node;
             }
+
+            //insert a new node at the front of the list
+            public void push(int ndata){
+                Node new_node = new Node(ndata);
+                new_node.next = head;
+                head = new_node;
+            }
         }
     }
 
