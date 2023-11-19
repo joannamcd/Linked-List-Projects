@@ -83,14 +83,14 @@ class Main {
             while(currNode != null && (!(currNode.str).equals(position))){
                 prevNode = currNode;
                 currNode = currNode.next;
-                String test= "test";
+                //String test= "test";
             }
                 //check if we found targetValue
-                if(currNode != null){
-                    //did find it
-                    prevNode.next = currNode.next;
-                    
-                }
+            if(currNode != null){
+                //did find it
+                prevNode.next = currNode.next;
+                
+            }
             }
         }
         return head;
