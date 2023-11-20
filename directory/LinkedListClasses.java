@@ -1,5 +1,9 @@
 package directory;
 import java.util.Scanner;
+/* 
+ * code from GitHub by Joanna McDonald
+ * user joamcd  
+*/
 
 class Node {
     String str;
@@ -18,7 +22,6 @@ class Main {
     public static int position(Node head, String find){
         //traverse through llist, start at pos 0 until next is null
         Node pointer = head;
-        //Node prev = head;
         int iterate = 0;
         while (pointer != null){
             if(pointer.toString() == find){
@@ -33,28 +36,17 @@ class Main {
 
     public static Node deleteN(Node head, String position) {
         
-      
-        
-        
-        Node temp = head; // Create a temporary node pointing to the head of the linked list
-        Node prev = null; // Create a previous node pointing to the head of the linked list
-        int iterate = 0;
-        
-        
         if(head != null){
             Node currNode = head;
         
             if((head.str).equals(position)){
                 head = head.next;
-                //prev.next = head;
-                //delete currNode
             }
         else{
             Node prevNode = null;
             while(currNode != null && (!(currNode.str).equals(position))){
                 prevNode = currNode;
                 currNode = currNode.next;
-                //String test= "test";
             }
                 //check if we found targetValue
             if(currNode != null){
@@ -89,11 +81,6 @@ class Main {
         String myScan;
         Node head = new Node();
         head.next = null;
-        String test = "test";
-        //head = push(head, "test");
-        //head = push(head, "test2");
-        //head = push(head, "test3");
-        //printList(head);
         Scanner scan = new Scanner(System.in);
         int numb = 1;
         String response;
@@ -109,7 +96,6 @@ class Main {
             else if(response.equals("R")){
                 System.out.println("What name?");
                 uName = scan.nextLine();
-                //int np = Integer.parseInt(scan.nextLine());
                 head = deleteN(head, uName);
             }
             else if(response.equals("V")){
